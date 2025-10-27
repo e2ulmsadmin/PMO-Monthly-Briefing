@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive Tabbed Interface</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="PMOCSS.css">
+</head>
+<body>
+
+    <h2>PMO Monthly Briefing Page</h2>
+
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'RecentCourses')">Recent Courses</button>
+        <button class="tablinks" onclick="openTab(event, 'Planning')">Planning</button>
+        <button class="tablinks" onclick="openTab(event, 'Processes')">Processes</button>
+        <button class="tablinks" onclick="openTab(event, 'Tools')">Tools</button>
+        <button class="tablinks" onclick="openTab(event, 'Development')">Development</button>
+    </div>
+
+    <!-- Recent Courses Tab -->
+<div id="RecentCourses" class="tabcontent">
+ <h3>Recent Courses 2025</h3>
+  <ul>
+            <li><a href="https://e2open.docebosaas.com/learn/course/3199/project-management-office-risk?generated_by=30961&hash=12b5346daa1d910c863ee45436bea90878ccecb3">Project Management Office: Risk</a> (2025-10-22)</li>
+
+            <li><a href="https://e2open.docebosaas.com/learn/course/3180/project-management-office-pd-checklist?generated_by=30961&hash=b99ad843e60b8e691bee08a958c58530245395e0">Project Management Office: PD Checklist</a> (2025-10-08</li>
+
+            <li><a href="https://e2open.docebosaas.com/learn/course/3171/project-management-office-test-plan?generated_by=30961&hash=fa7ce100fd045315d37d5324ae42b4366819b9b5">Project Management Office: Test Plan
+            </a> (2025-09-24)</li>
+
+            <li><a href="https://e2open.docebosaas.com/learn/course/3175/project-management-office-resource-planning-process?generated_by=30961&hash=77997e97472277b1cfe0d5110b84b925a7d171aa">Project Management Office: Resource Planning Process
+          </a> (2025-08-28)</li>
+
+        </ul>
+    </div>
+
+    <!-- Planning Tab -->
+    <div id="Planning" class="tabcontent">
+        <h3>Planning</h3>
+         <a class="Cbtn1"
+                  href="https://e2open.docebosaas.com/learn/course/3175/project-management-office-resource-planning-process?generated_by=30961&hash=77997e97472277b1cfe0d5110b84b925a7d171aa"
+                  target="_blank">
+
+        <div class="card-container">
+            <div class="card">
+                <h4>Project Management Office: Resource Planning Process</h4>
+                <p>This course teaches resource planning, project modeling, Adaptive Work inputs, and staffing management. Designed for Program Directors and Resource Managers to improve forecasting, dynamic updates, and strategic workforce alignment.</p>
+                <p><span>Session Conducted:</span> 2025-08-27</p>
+                <p><span>Duration:</span> 58 minutes</p>
+            </div>
+        </div>
+        </a>
+    </div>
+
+    <!-- Processes Tab -->
+    <div id="Processes" class="tabcontent">
+        <h3>Processes</h3>
+          <a class="Cbtn1"
+                  href="https://e2open.docebosaas.com/learn/course/3199/project-management-office-risk?generated_by=30961&hash=12b5346daa1d910c863ee45436bea90878ccecb3"
+                  target="_blank">
+
+        <div class="card-container">
+            <div class="card">
+                <h4>Project Management Office: Risk</h4>
+                <p>This lesson covers project risk management fundamentals, including early identification, Adaptive Work risk registers, workshops, ownership, and reviews. Learn practical tips, common mistakes, and best practices to boost project outcomes and leadership visibility.</p>
+                <p><span>Session Conducted:</span> 2025-10-22</p>
+                <p><span>Duration:</span> 51 minutes</p>
+            </div>
+            </a>
+
+            <a class="Cbtn1"
+               href="https://e2open.docebosaas.com/learn/course/3171/project-management-office-test-plan?generated_by=30961&hash=fa7ce100fd045315d37d5324ae42b4366819b9b5"
+               target="_blank">
+                <div class="card">
+                    <h4>Project Management Office: Test Plan</h4>
+                    <p>Learn the PMO E2Launch Test Plan framework to ensure quality delivery through structured testing. Covers strategy, roles, RACI, and resources. Ideal for Program Directors, QA/Test Leads, Engineering Leads, and Solution Architects in professional services.</p>
+                    <p><span>Session Conducted:</span> 2025-09-24</p>
+                    <p><span>Duration:</span> 45 minutes</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Tools Tab -->
+    <div id="Tools" class="tabcontent">
+        <h3>Tools</h3>
+        <div class="card-container">
+            <a class="Cbtn1"
+               href="https://e2open.docebosaas.com/learn/course/3180/project-management-office-pd-checklist?generated_by=30961&hash=b99ad843e60b8e691bee08a958c58530245395e0"
+               target="_blank">
+                <div class="card">
+                    <h4>Project Management Office: PD Checklist</h4>
+                    <p>Explore the PD Checklist—a strategic PMO tool for managing complex projects. Learn how it guides processes, prevents common issues, and improves delivery through structured steps, real-world examples, and continuous feedback. Ideal for Program Directors.</p>
+                    <p><span>Session Conducted:</span> 2025-10-08</p>
+                    <p><span>Duration:</span> 31 minutes</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    
+
+    <!-- Development Tab -->
+    <div id="Development" class="tabcontent">
+        <h3>Development</h3>
+    </div>
+
+
+
+    <!-- Javascript Code -->
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Open the first tab by default
+        document.addEventListener("DOMContentLoaded", function() {
+            var first = document.querySelector(".tablinks");
+            if (first) first.click();
+        });
+    </script>
+
+</body>
+</html>
